@@ -1,0 +1,8 @@
+id: frost_bolt
+name: Frost Bolt
+description: "Hits one random enemy with frost for 140% of your attack minus half their defense (at least 1)."
+cooldown: 2
+tags: [frost]   # all damage this skill deals carries the frost tag
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, math.max(1, caster.stats.attack * 1.4 - t.stats.defense * 0.5))

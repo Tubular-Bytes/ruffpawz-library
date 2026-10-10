@@ -1,0 +1,6 @@
+id: leather
+name: Leather Armor
+description: "Light protection: a random +0 to +3 defense. Offers Guard."
+skills: [guard]
+roll: |
+  return { modifiers = { { stat = "defense", op = "add", value = rand(0, 3) } } }

@@ -1,0 +1,14 @@
+id: firestorm
+name: Firestorm
+description: "Hits every enemy for 50% of your attack with fire. For 3 rounds, everyone carrying a frost item (weapon, armor, ...) deals 2 less damage, allies included."
+cooldown: 5
+tags: [fire]
+lua: |
+  for _, t in ipairs(enemies) do
+    deal_damage(t, caster.stats.attack * 0.5)
+  end
+  -- Anything with a frost-tagged item (weapon, armor, ...) deals 2 less damage for 3 rounds.
+  add_modifier{
+    damage = "dealt", op = "add", value = -2,
+    applies_to = { tags = { "frost" } }, duration = 3, name = "Firestorm",
+  }

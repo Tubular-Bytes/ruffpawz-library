@@ -1,0 +1,7 @@
+id: mage
+name: Mage
+description: "Spellcaster: +4 attack but 10% less health. Starts with Arcane Bolt."
+skills: [arcane_bolt]
+modifiers:
+  - { stat: attack, op: add, value: 4 }
+  - { stat: hp, op: mul, value: 0.9 }

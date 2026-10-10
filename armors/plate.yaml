@@ -1,0 +1,7 @@
+id: plate
+name: Plate Armor
+description: "Heavy protection: +5 defense but -2 initiative. Offers Guard."
+skills: [guard]
+modifiers:
+  - { stat: defense, op: add, value: 5 }
+  - { stat: initiative, op: add, value: -2 }

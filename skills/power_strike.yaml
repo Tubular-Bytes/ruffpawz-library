@@ -1,0 +1,7 @@
+id: power_strike
+name: Power Strike
+description: "Hits one random enemy for 150% of your attack minus half their defense (at least 1)."
+cooldown: 2
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, math.max(1, caster.stats.attack * 1.5 - t.stats.defense * 0.5))

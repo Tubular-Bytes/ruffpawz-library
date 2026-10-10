@@ -1,0 +1,10 @@
+id: mend
+name: Mend
+description: "Restores 30 health to the ally with the lowest share of their health left (yourself included)."
+cooldown: 3
+lua: |
+  local weakest = allies[1]
+  for _, a in ipairs(allies) do
+    if a.hp / a.max_hp < weakest.hp / weakest.max_hp then weakest = a end
+  end
+  heal(weakest, 30)

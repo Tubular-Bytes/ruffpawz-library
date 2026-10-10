@@ -1,0 +1,6 @@
+id: healing_potion
+name: Healing Potion
+description: "Restores 40 health to yourself."
+cooldown: 5
+lua: |
+  heal(caster, 40)

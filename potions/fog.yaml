@@ -1,0 +1,4 @@
+id: fog
+name: Fog Potion
+description: "Gives the Fog Potion skill: for 2 rounds everyone, allies and enemies, deals 20% less attack."
+skills: [fog_potion]

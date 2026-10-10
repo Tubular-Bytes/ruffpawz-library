@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: dagger
+name: Dagger
+description: "Light and quick: a random +1 to +3 initiative. Offers Backstab and Flurry."
+skills: [backstab, flurry]
+roll: |
+  return {
+    modifiers = {
+      { stat = "initiative", op = "add", value = rand(1, 3) },
+    },
+  }

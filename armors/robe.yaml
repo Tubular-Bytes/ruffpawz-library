@@ -1,0 +1,6 @@
+id: robe
+name: Robe
+description: "Light cloth: +1 initiative. Offers Mend and Guard."
+skills: [mend, guard]
+modifiers:
+  - { stat: initiative, op: add, value: 1 }

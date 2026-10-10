@@ -1,0 +1,7 @@
+id: arcane_bolt
+name: Arcane Bolt
+description: "Hits one random enemy for 180% of your attack. Ignores their defense."
+cooldown: 2
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, caster.stats.attack * 1.8)

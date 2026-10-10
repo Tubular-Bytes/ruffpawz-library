@@ -1,0 +1,8 @@
+id: human
+name: Human
+description: "Adaptable and steady, with no stat changes. Knows Second Wind."
+skills: [second_wind]
+name_gen: |
+  local first = { "Aldric", "Brenna", "Cedric", "Dara", "Edmund", "Fiona", "Gareth", "Helena" }
+  local last = { "Ashford", "Blackwood", "Crane", "Dunmore", "Ellis", "Fairchild" }
+  return first[rand(#first)] .. " " .. last[rand(#last)]

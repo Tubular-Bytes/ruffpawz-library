@@ -1,0 +1,8 @@
+id: ember_robe
+name: Ember Robe
+description: "Fire-attuned: takes 30% less frost damage. Offers Firestorm and Guard."
+skills: [firestorm, guard]
+tags: [fire]
+modifiers:
+  # Fire-attuned: takes 30% less frost damage.
+  - { damage: taken, tags: [frost], op: mul, value: 0.7 }

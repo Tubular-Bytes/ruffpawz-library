@@ -1,0 +1,6 @@
+id: warrior
+name: Warrior
+description: "Frontline fighter: +20 health. Starts with Power Strike."
+skills: [power_strike]
+modifiers:
+  - { stat: hp, op: add, value: 20 }

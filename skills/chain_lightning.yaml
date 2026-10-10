@@ -1,0 +1,8 @@
+id: chain_lightning
+name: Chain Lightning
+description: "Hits every enemy for 60% of your attack. Ignores their defense."
+cooldown: 3
+lua: |
+  for _, t in ipairs(enemies) do
+    deal_damage(t, caster.stats.attack * 0.6)
+  end
