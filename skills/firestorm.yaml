@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: firestorm
 name: Firestorm
 description: "Hits every enemy for 50% of your attack with fire. For 3 rounds, everyone carrying a frost item (weapon, armor, ...) deals 2 less damage, allies included."

@@ -1,0 +1,1 @@
+Damage from frost skills carries the frost tag, and weapons and armor can be frost-themed too. Fire-attuned gear takes less frost damage, and **Firestorm** weakens everyone carrying a frost item for a few rounds.
