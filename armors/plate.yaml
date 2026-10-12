@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: plate
 name: Plate Armor
 description: "Heavy protection: +5 defense but -2 initiative. Offers Guard."

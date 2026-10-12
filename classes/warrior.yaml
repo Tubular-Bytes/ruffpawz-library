@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: warrior
 name: Warrior
 description: "Frontline fighter: +20 health. Starts with Power Strike."

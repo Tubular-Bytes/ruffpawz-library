@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: fog_potion
 name: Fog Potion
 description: "Everyone, allies and enemies, deals 20% less attack for 2 rounds."

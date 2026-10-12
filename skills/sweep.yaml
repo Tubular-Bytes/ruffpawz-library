@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: sweep
 name: Sweep
 description: "Hits every enemy for 80% of your attack minus 30% of their defense (at least 1 each)."
