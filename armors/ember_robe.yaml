@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: ember_robe
 name: Ember Robe
 description: "Fire-attuned: takes 30% less frost damage. Offers Firestorm and Guard."

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: frost_bolt
 name: Frost Bolt
 description: "Hits one random enemy with frost for 140% of your attack minus half their defense (at least 1)."

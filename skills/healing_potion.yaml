@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: healing_potion
 name: Healing Potion
 description: "Restores 40 health to yourself."
