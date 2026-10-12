@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: kitten
+name: Kitten
+description: "Meow"
+skills: [sweep]
+name_gen: |
+  local names = { "Luna", "Milo", "Leo", "Bella", "Charlie", "Lucy", "Loki", "Shadow", "Max" }
+  return names[rand(#names)]
