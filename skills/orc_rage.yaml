@@ -3,5 +3,6 @@ id: orc_rage
 name: Orc Rage
 description: "Raises your own attack by 40% for 2 rounds."
 cooldown: 4
+retired: true
 lua: |
   add_modifier{ target = caster, stat = "attack", op = "mul", value = 1.4, duration = 2 }
