@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: leather
 name: Leather Armor
 description: "Light protection: a random +0 to +3 defense. Offers Guard."

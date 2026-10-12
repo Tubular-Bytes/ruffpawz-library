@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: chain_lightning
 name: Chain Lightning
 description: "Hits every enemy for 60% of your attack. Ignores their defense."

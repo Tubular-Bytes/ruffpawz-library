@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: flurry
 name: Flurry
 description: "Two quick hits, each on a random enemy (it can be the same one twice). Each deals 80% of your attack minus half the target's defense (at least 1)."

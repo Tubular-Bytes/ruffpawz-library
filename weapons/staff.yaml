@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: staff
 name: Staff
 description: "A random +1 to +4 attack. Always offers Chain Lightning, plus either Flurry or Sweep, decided when the character is made."

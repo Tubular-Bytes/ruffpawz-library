@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: robe
 name: Robe
 description: "Light cloth: +1 initiative. Offers Mend and Guard."
