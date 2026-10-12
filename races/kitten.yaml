@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: kitten
 name: Kitten
-description: "Meow"
+description: "Some say they selfish but at least they know sweep"
 skills: [sweep]
 name_gen: |
   local names = { "Luna", "Milo", "Leo", "Bella", "Charlie", "Lucy", "Loki", "Shadow", "Max" }
