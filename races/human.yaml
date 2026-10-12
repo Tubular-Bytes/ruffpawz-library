@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: human
 name: Human
 description: "Adaptable and steady, with no stat changes. Knows Second Wind."

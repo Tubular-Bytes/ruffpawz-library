@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: backstab
 name: Backstab
 description: "Hits one random enemy for twice your attack, minus their full defense (at least 1)."

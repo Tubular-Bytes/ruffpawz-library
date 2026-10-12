@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: mage
 name: Mage
 description: "Spellcaster: +4 attack but 10% less health. Starts with Arcane Bolt."

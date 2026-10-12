@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: second_wind
 name: Second Wind
 description: "Restores a quarter of your maximum health to yourself."
