@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: antidote
+name: Antidote
+description: "Makes you immune to poison for 2 rounds. Poison already on you is held back during that time (its rounds still run out), and new poison is resisted."
+cooldown: 4
+lua: |
+  add_modifier{ immune = { dispel = { "poison" } }, duration = 2, name = "Antidote" }
