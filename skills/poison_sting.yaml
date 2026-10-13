@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: poison_sting
+name: Poison Sting
+description: "Hits one random enemy for 60% of your attack minus half their defense (at least 1) and poisons them: 4 poison damage at the start of each of their turns for 3 rounds. Poisoning the same enemy again only renews it."
+cooldown: 3
+tags: [poison]
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, math.max(1, caster.stats.attack * 0.6 - t.stats.defense * 0.5))
+  add_effect{ kind = "damage_over_time", amount = 4, tags = { "poison" }, dispel = { "poison" }, target = t, duration = 3, name = "Poison" }
