@@ -1,9 +1,10 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: druid
 name: Druid
-description: "Tanky healer: +10 health, +2 defense, -4 attack. Starts with Mend."
+description: "Tanky healer: +10 health, +2 defense, -4 attack, heals 25% more. Starts with Mend."
 skills: [mend]
 modifiers:
   - { stat: hp, op: add, value: 10 }
   - { stat: defense, op: add, value: 2 }
   - { stat: attack, op: add, value: -4 }
+  - { heal: given, op: mul, value: 1.25 }
