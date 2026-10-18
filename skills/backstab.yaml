@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: backstab
 name: Backstab
-description: "Hits one random enemy for twice your attack, minus their full defense (at least 1)."
+description: "Hits one random enemy for twice your attack, reduced by their defense, which counts double against it (at least 1)."
 cooldown: 2
 lua: |
   local t = enemies[rand(#enemies)]
-  deal_damage(t, math.max(1, caster.stats.attack * 2 - t.stats.defense))
+  deal_damage(t, math.max(1, math.floor(caster.stats.attack * 2 * 40 / (40 + t.stats.defense * 2) + 0.5)))
