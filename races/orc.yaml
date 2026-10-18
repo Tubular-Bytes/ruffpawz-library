@@ -3,7 +3,6 @@ id: orc
 name: Orc
 description: "Tough but slow: +15 health, -1 initiative. Bloodrage: +25% attack while below half health. Knows Orc Rage."
 skills: [orc_rage]
-retired: true
 modifiers:
   - { stat: hp, op: add, value: 15 }
   - { stat: initiative, op: add, value: -1 }
