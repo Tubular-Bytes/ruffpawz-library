@@ -8,7 +8,11 @@ modifiers:
   - { stat: hp, op: add, value: 15 }
   - { stat: initiative, op: add, value: -1 }
   # Bloodrage: +25% attack while below half health (condition is Lua, re-checked every turn).
-  - { stat: attack, op: mul, value: 1.25, condition: "source.hp < source.max_hp * 0.5" }
+  - stat: attack
+    op: mul
+    value: 1.25
+    conditions:
+      - { condition: "source.hp < source.max_hp * 0.5", tooltip: "health is below 50%" }
 name_gen: |
   local a = { "Gr", "Kr", "Mog", "Dur", "Thok", "Ug" }
   local b = { "ash", "uk", "og", "ar", "ul" }

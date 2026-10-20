@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: purify
+name: Purify
+description: "Cleanses the ally with the least health of poison: any poison effect or poison-labelled debuff on them is removed."
+cooldown: 3
+lua: |
+  local weakest = allies[1]
+  for _, a in ipairs(allies) do
+    if a.hp < weakest.hp then weakest = a end
+  end
+  cleanse{ target = weakest, dispel = { "poison" } }

@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: antidote
+name: Antidote
+description: "Gives the Antidote skill: immune to poison for 2 rounds."
+skills: [antidote]
