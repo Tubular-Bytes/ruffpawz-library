@@ -1,0 +1,9 @@
+id: deep_freeze
+name: Deep Freeze
+description: "Freezes one random enemy: they cannot act at the start of their next turn. Frozen enemies stay frozen for 1 round only, and freezing the same enemy again only renews it."
+cooldown: 4
+tags: [frost]
+retired: true
+lua: |
+  local t = enemies[rand(#enemies)]
+  add_effect{ kind = "stun", target = t, duration = 1, dispel = { "ice" }, name = "Frozen" }
