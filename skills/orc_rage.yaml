@@ -1,8 +1,9 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: orc_rage
 name: Orc Rage
-description: "Raises your own attack by 40% for 2 rounds."
+description: "Raises your own physical and magic attack by 40% for 2 rounds."
 cooldown: 4
 retired: true
 lua: |
-  add_modifier{ target = caster, stat = "attack", op = "mul", value = 1.4, duration = 2 }
+  add_modifier{ target = caster, stat = "physical_attack", op = "mul", value = 1.4, duration = 2 }
+  add_modifier{ target = caster, stat = "magic_attack", op = "mul", value = 1.4, duration = 2 }

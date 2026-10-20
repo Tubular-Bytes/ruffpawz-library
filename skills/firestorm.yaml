@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: firestorm
 name: Firestorm
-description: "Hits every enemy for 50% of your attack with fire. For 3 rounds, everyone carrying a frost item (weapon, armor, ...) deals 2 less damage, allies included."
+description: "Hits every enemy for 50% of your magic attack with fire. For 3 rounds, everyone carrying a frost item (weapon, armor, ...) deals 2 less damage, allies included."
 cooldown: 5
 tags: [fire]
 lua: |
@@ -11,7 +11,7 @@ lua: |
 
   for _, t in ipairs(everyone) do
     if t.team ~= caster.team then
-      deal_damage(t, caster.stats.attack * 0.5)
+      deal_damage(t, caster.stats.magic_attack * 0.5)
     end
 
     for _, e in ipairs(t.effects) do

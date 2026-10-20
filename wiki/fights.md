@@ -12,6 +12,6 @@ A fight is played in rounds until only one team has anyone left standing. If it 
 
 **Cooldowns.** A skill with a cooldown of 3 is unavailable for the next 3 rounds after it was used. Every skill is ready at the start of the fight.
 
-**Damage.** A skill works out its base damage, usually from the attacker's *attack*. Modifiers the attacker has for damage it deals come next, then modifiers the target has for damage it takes. Damage never goes below zero, and a character at 0 *hp* is out of the fight. Healing cannot raise *hp* above the maximum.
+**Damage.** A skill works out its base damage, usually from the attacker's *physical attack* or *magic attack*. Modifiers the attacker has for damage it deals come next, then modifiers the target has for damage it takes. Damage never goes below zero, and a character at 0 *hp* is out of the fight. Healing cannot raise *hp* above the maximum.
 
 **Modifiers.** Classes, races and gear change stats and damage. Within one value, all additions are applied first and all multipliers after that. Some modifiers come from skills and only last a few rounds.

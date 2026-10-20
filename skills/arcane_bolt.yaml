@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: arcane_bolt
 name: Arcane Bolt
-description: "Hits one random enemy for 180% of your attack. Ignores their defense."
+description: "Hits one random enemy for 180% of your magic attack. Ignores their defense."
 cooldown: 2
 lua: |
   local t = enemies[rand(#enemies)]
-  deal_damage(t, caster.stats.attack * 1.8)
+  deal_damage(t, caster.stats.magic_attack * 1.8)
