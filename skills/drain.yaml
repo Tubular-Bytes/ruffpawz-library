@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: drain
+name: Drain
+description: "Hits one random enemy for your attack, heals 150% of your attack"
+cooldown: 2
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, caster.stats.attack)
+  heal(caster, caster.stats.attack * 1.5)

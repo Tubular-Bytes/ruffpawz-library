@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: bat
+name: Bat
+description: "They like the darkness and they can use drain"
+skills: [drain]
+name_gen: |
+  local names = { "Lestat", "Bill", "Erik", "Godric", "Pam", "Jessica" }
+  return names[rand(#names)]

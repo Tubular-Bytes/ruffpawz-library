@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: pup
+name: Pup
+description: "Arf"
+skills: [power_strike]
+name_gen: |
+  local names = { "Bandit", "Bluey", "Bingo", "Chilli", "Chloe" }
+  return names[rand(#names)]
