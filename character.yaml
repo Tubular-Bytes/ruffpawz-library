@@ -1,4 +1,4 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/character
 # The single character blueprint: base resources only.
 # Class, race, weapon, armor and potion are rolled at instantiation and decide everything else.
-stats: { hp: 100, attack: 10, defense: 4, initiative: 10 }
+stats: { hp: 100, attack: 10, defense: 7, initiative: 10 }

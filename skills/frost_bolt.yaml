@@ -6,4 +6,4 @@ cooldown: 2
 tags: [frost]   # all damage this skill deals carries the frost tag
 lua: |
   local t = enemies[rand(#enemies)]
-  deal_damage(t, math.max(1, caster.stats.attack * 1.4 - t.stats.defense * 0.5))
+  deal_damage(t, math.max(1, math.floor(caster.stats.attack * 1.4 * 40 / (40 + t.stats.defense * 1) + 0.5)))

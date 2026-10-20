@@ -5,4 +5,4 @@ description: "Hits one random enemy for twice your attack, minus their full defe
 cooldown: 2
 lua: |
   local t = enemies[rand(#enemies)]
-  deal_damage(t, math.max(1, caster.stats.attack * 2 - t.stats.defense))
+  deal_damage(t, math.max(1, math.floor(caster.stats.attack * 2 * 40 / (40 + t.stats.defense * 2) + 0.5)))

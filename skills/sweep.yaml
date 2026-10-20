@@ -5,5 +5,5 @@ description: "Hits every enemy for 80% of your attack minus 30% of their defense
 cooldown: 4
 lua: |
   for _, t in ipairs(enemies) do
-    deal_damage(t, math.max(1, caster.stats.attack * 0.8 - t.stats.defense * 0.3))
+    deal_damage(t, math.max(1, math.floor(caster.stats.attack * 0.8 * 40 / (40 + t.stats.defense * 0.6) + 0.5)))
   end
