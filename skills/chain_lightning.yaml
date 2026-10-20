@@ -1,9 +1,11 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: chain_lightning
 name: Chain Lightning
-description: "Hits every enemy for 60% of your attack. Ignores their defense."
+description: "Releases a chain lightning with decreasing chance to hit enemies. Enemies hit take 60% of your attack as damage. Ignores their defense."
 cooldown: 3
 lua: |
-  for _, t in ipairs(enemies) do
+  local chances = { 1, 0.9, 0.7, 0.4 }  -- chance that the Nth enemy is hit
+  for i, t in ipairs(enemies) do
+    if rand() >= (chances[i] or 0) then break end
     deal_damage(t, caster.stats.attack * 0.6)
   end

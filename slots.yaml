@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/slots
+# How many affixes an item rolls, the same odds for every roll. At most 6.
+slots:
+  - { count: 1, weight: 20 }
+  - { count: 2, weight: 30 }
+  - { count: 3, weight: 25 }
+  - { count: 4, weight: 15 }
+  - { count: 5, weight: 7 }
+  - { count: 6, weight: 3 }

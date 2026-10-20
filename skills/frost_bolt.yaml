@@ -1,9 +1,24 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: frost_bolt
 name: Frost Bolt
-description: "Hits one random enemy with frost for 140% of your attack minus half their defense (at least 1)."
+description: "Hits one random enemy with frost for 140% of your attack minus half their defense (at least 1). Hitting a target that is not frozen has a 40% chance to apply Frozen. Hitting a target that is already frozen has a 20% chance to refresh Frozen duration but only deals 50% of the calculated damage"
 cooldown: 2
 tags: [frost]   # all damage this skill deals carries the frost tag
 lua: |
+  local frozen_modifier = 0.5
+  local freeze_chance = 0.4
+  local refreeze_chance = 0.2
   local t = enemies[rand(#enemies)]
-  deal_damage(t, math.max(1, math.floor(caster.stats.attack * 1.4 * 40 / (40 + t.stats.defense * 1) + 0.5)))
+  local damage = math.max(1, caster.stats.attack * 1.4 - t.stats.defense * 0.5)
+  
+  local frozen = false
+  for _, e in ipairs(t.effects) do
+    if e.name == "Frozen" then frozen = true end
+  end
+
+  if frozen then damage = damage * frozen_modifier end
+  if rand() < (frozen and refreeze_chance or freeze_chance) then
+    add_effect{ kind = "stun", target = t, duration = 2, dispel = { "ice" }, name = "Frozen" }
+  end
+
+  deal_damage(t, damage)

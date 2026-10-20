@@ -5,9 +5,23 @@ description: "Hits every enemy for 50% of your attack with fire. For 3 rounds, e
 cooldown: 5
 tags: [fire]
 lua: |
-  for _, t in ipairs(enemies) do
-    deal_damage(t, caster.stats.attack * 0.5)
+  local everyone = {}
+  for _, t in ipairs(enemies) do everyone[#everyone + 1] = t end
+  for _, t in ipairs(allies) do everyone[#everyone + 1] = t end
+
+  for _, t in ipairs(everyone) do
+    if t.team ~= caster.team then
+      deal_damage(t, caster.stats.attack * 0.5)
+    end
+
+    for _, e in ipairs(t.effects) do
+      if e.name == "Frozen" then
+        if rand() < 0.4 then cleanse{ target = t, name = "Frozen" } end
+        break  -- one roll per character
+      end
+    end
   end
+
   -- Anything with a frost-tagged item (weapon, armor, ...) deals 2 less damage for 3 rounds.
   add_modifier{
     damage = "dealt", op = "add", value = -2,
