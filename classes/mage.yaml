@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: mage
 name: Mage
-description: "Spellcaster: +4 attack but 10% less health. Starts with Arcane Bolt."
+description: "Spellcaster: +4 magic attack but 10% less health. Starts with Arcane Bolt."
 skills: [arcane_bolt]
 modifiers:
-  - { stat: attack, op: add, value: 4 }
+  - { stat: magic_attack, op: add, value: 4 }
   - { stat: hp, op: mul, value: 0.9 }

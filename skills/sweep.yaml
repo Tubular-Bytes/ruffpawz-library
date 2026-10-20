@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: sweep
 name: Sweep
-description: "Hits every enemy for 80% of your attack minus 30% of their defense (at least 1 each)."
+description: "Hits every enemy for 80% of your physical attack, 60% of their physical defense counting against it (at least 1 each)."
 cooldown: 4
 lua: |
   for _, t in ipairs(enemies) do
-    deal_damage(t, math.max(1, math.floor(caster.stats.attack * 0.8 * 40 / (40 + t.stats.defense * 0.6) + 0.5)))
+    deal_damage(t, math.floor(mitigate(caster.stats.physical_attack * 0.8, t, "physical", 0.6) + 0.5))
   end

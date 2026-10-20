@@ -1,7 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: guard
 name: Guard
-description: "Raises your own defense by 6 for 2 rounds."
+description: "Raises your own physical and magic defense by 6 for 2 rounds."
 cooldown: 3
 lua: |
-  add_modifier{ target = caster, stat = "defense", op = "add", value = 6, duration = 2 }
+  add_modifier{ target = caster, stat = "physical_defense", op = "add", value = 6, duration = 2 }
+  add_modifier{ target = caster, stat = "magic_defense", op = "add", value = 6, duration = 2 }

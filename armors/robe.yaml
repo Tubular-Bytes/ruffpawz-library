@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: robe
 name: Robe
-description: "Light cloth: +1 initiative. Offers Mend and Guard."
+description: "Light cloth: +1 initiative and a random +0 to +3 magic defense. Offers Mend and Guard."
 skills: [mend, guard]
 modifiers:
   - { stat: initiative, op: add, value: 1 }
+affixes:
+  - { id: "magic_defense", weight: 50 }

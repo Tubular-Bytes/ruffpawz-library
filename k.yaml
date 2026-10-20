@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/k
+# K of the damage formula, per kind of damage: mitigate(hit, target, kind, f) does hit * K / (K + defense * f).
+# A lower K makes defense count for more and fights longer; a higher K the other way round.
+physical: 40
+magic: 40

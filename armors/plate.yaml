@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: plate
 name: Plate Armor
-description: "Heavy protection: +5 defense but -2 initiative. Offers Guard."
+description: "Heavy protection: +5 physical defense but -2 initiative. Offers Guard."
 skills: [guard]
 modifiers:
-  - { stat: defense, op: add, value: 5 }
+  - { stat: physical_defense, op: add, value: 5 }
   - { stat: initiative, op: add, value: -2 }

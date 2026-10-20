@@ -1,8 +1,10 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/affix
 id: defense
 name: Defense
-description: Cuts the damage of every hit that is not magic.
-stat: defense
+description: Replaced by physical and magic defense; kept so characters that rolled it stay valid.
+retired: true
+# The stat has to exist in character.yaml, so the retired affix points at physical defense.
+stat: physical_defense
 op: add
 tiers:
   - { tier: 1, range: [1, 3], weight: 50 }

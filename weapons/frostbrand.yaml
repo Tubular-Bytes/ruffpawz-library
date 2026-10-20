@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: frostbrand
 name: Frostbrand
-description: "A frost-tagged blade: +2 attack, and its damage carries frost. Offers Frost Bolt and Sweep. Fire attacks like Firestorm weaken it."
+description: "A frost-tagged blade: +2 physical attack, and its damage carries frost. Offers Frost Bolt and Sweep. Fire attacks like Firestorm weaken it."
 skills: [frost_bolt, sweep]
 tags: [frost]
 modifiers:
-  - { stat: attack, op: add, value: 2 }
+  - { stat: physical_attack, op: add, value: 2 }
