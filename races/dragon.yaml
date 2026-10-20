@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: dragon
+name: Dragon
+description: "They're scary, conjure fire and hard to get through. They start with the 50% extra health and high defense ratings (+3 physical, +6 magic) but they're not very good at dealing physical damage (-3) and they're very slow (-4 initiative)"
+skills: [firestorm]
+modifiers:
+  - { stat: hp, op: mul, value: 1.5 }
+  - { stat: initiative, op: add, value: -4 }
+  - { stat: physical_defense, op: add, value: 3 }
+  - { stat: magic_defence, op: add, value: 6 }
+  - { stat: physical_attack, op: add, value: -3 }
+name_gen: |
+  if rand() < 0.5 then
+    local a = { "Vyr", "Ign", "Thar", "Zal", "Kor", "Sael", "Drak", "Ael" }
+    local b = { "a", "o", "ae", "i", "y" }
+    local c = { "thax", "gorn", "rax", "thor", "vyr", "dun", "moth" }
+    return a[rand(#a)] .. b[rand(#b)] .. c[rand(#c)]
+  else
+    local a = { "Vyr", "Ign", "Thar", "Zal", "Kor", "Sael" }
+    local c = { "athax", "ogorn", "yrax", "ithor", "aevyr" }
+    local epithets = { "the Elder", "Ashbreath", "Emberwing", "the Unburnt", "Stormscale" }
+    local name = a[rand(#a)] .. c[rand(#c)]
+    if rand() < 0.5 then name = name .. " " .. epithets[rand(#epithets)] end
+    return name
+  end

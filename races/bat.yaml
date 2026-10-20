@@ -1,8 +1,14 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: bat
 name: Bat
-description: "They like the darkness and they can use drain"
+description: "They like the darkness and they can use drain. They prefer quick physical attacks, +2 initiative and +3 physical attack rating but 20% less HP and penalties to magic attack and defense. They start with drain."
 skills: [drain]
+modifiers:
+  - { stat: hp, op: mul, value: 0.8 }
+  - { stat: initiative, op: add, value: 2 }
+  - { stat: physical_attack, op: add, value: 3 }
+  - { stat: magic_attack, op: add, value: -2 }
+  - { stat: magic_defence, op: add, value: -2 }
 name_gen: |
   local names = { "Lestat", "Bill", "Erik", "Godric", "Pam", "Jessica" }
   return names[rand(#names)]

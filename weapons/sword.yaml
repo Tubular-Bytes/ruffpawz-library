@@ -3,7 +3,7 @@ id: sword
 name: Sword
 description: "Reliable steel: +3 physical attack plus a random 0 to 2 more. Offers Sweep and Backstab."
 skills: [sweep, backstab]
-modifiers:
-  - { stat: physical_attack, op: add, value: 3 }
 roll: |
   return { modifiers = { { stat = "physical_attack", op = "add", value = rand(0, 2) } } }
+affixes:
+  - { id: physical_attack, weight: 50, max_tier: 3 }

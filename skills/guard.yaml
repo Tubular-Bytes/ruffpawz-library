@@ -4,5 +4,19 @@ name: Guard
 description: "Raises your own physical and magic defense by 6 for 2 rounds."
 cooldown: 3
 lua: |
-  add_modifier{ target = caster, stat = "physical_defense", op = "add", value = 6, duration = 2 }
-  add_modifier{ target = caster, stat = "magic_defense", op = "add", value = 6, duration = 2 }
+  local buff_value_self = 6
+  local buff_value_other = 3
+
+  local function buff(who, value)
+    for _, stat in ipairs{ "physical_defense", "magic_defense" } do
+      add_modifier{ target = who, stat = stat, op = "add", value = value, duration = 2, name = "Guard" }
+    end
+  end
+
+  buff(caster, buff_value_self)
+
+  local others = {}
+  for _, a in ipairs(allies) do
+    if a.id ~= caster.id then others[#others + 1] = a end
+  end
+  if #others > 0 then buff(others[rand(#others)], buff_value_other) end
