@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: entangle
+name: Entangle
+description: "Surrounds a random enemy with vines that slow and deal 30% of the caster's magic attack damage to them over time for 3 rounds."
+cooldown: 3
+lua: |
+  local t = enemies[rand(#enemies)]
+  add_effect{ kind = "damage_over_time", target = t, duration = 3, amount = caster.stats.magic_attack * 0.3, name = "Tangled" }
+  add_modifier{ target = t, stat = "initiative", op = "add", value = -4, duration = 3, name = "Tangled"}

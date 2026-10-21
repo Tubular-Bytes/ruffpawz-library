@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: warlock
+name: Warlock
+description: "Spellcaster: +4 magic attack but 15% less health. Starts with Arcane Bolt."
+skills: [arcane_bolt]
+modifiers:
+  - { stat: magic_attack, op: add, value: 4 }
+  - { stat: hp, op: mul, value: 0.85 }

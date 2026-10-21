@@ -5,3 +5,4 @@ description: "Light protection: a random +0 to +3 physical defense. Offers Guard
 skills: [guard]
 affixes:
   - { id: "physical_defense", weight: 50 }
+  - { id: initiative, weight: 10, max_tier: 1 }

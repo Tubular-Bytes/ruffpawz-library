@@ -4,8 +4,8 @@ name: Pup
 description: "Arf. They are strong and fierce protectors but they're slow. They start with 30% extra health and +2 on both defense types but they have -3 penalty on their initiatve and their attack ratings are also decreased by 1."
 skills: [guard]
 modifiers:
-  - { stat: hp, op: mul, value: 1.3 }
-  - { stat: initiative, op: add, value: -3 }
+  - { stat: hp, op: mul, value: 1.4 }
+  - { stat: initiative, op: add, value: -2 }
   - { stat: physical_attack, op: add, value: -1 }
   - { stat: magic_attack, op: add, value: -1 }
   - { stat: physical_defense, op: add, value: 2 }

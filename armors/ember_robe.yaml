@@ -7,3 +7,6 @@ tags: [fire]
 modifiers:
   # Fire-attuned: takes 30% less frost damage.
   - { damage: taken, tags: [frost], op: mul, value: 0.7 }
+affixes:
+  - { id: magic_defense, weight: 50 }
+  - { id: initiative, weight: 10, max_tier: 2 }

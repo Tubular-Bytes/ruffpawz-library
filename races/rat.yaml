@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: rat
+name: Rat
+description: "placeholder"
+skills: [rend]
+modifiers:
+  - { stat: hp, op: mul, value: 0.8 }
+  - { stat: initiative, op: add, value: 3 }
+  - { stat: physical_attack, op: add, value: 3 }
+  - { stat: physical_defense, op: add, value: -2 }
+  - { stat: magic_defense, op: add, value: -3 }
+name_gen: |
+  local starts = { "Skr", "Sn", "Qu", "Kr", "Chi", "Gn", "Vr", "Sk", "Tw", "Gr", "Sq" }
+  local middles = { "i", "ee", "ik", "itt", "ack" }
+  local ends = { "tch", "kk", "zle", "rik", "vik", "bit", "fang", "ik" }
+  local nicknames = {
+    "Gnaw-tail", "Four-Whiskers", "the Nibbler", "Cheese-Thief", "Scab-Ear",
+    "Long-Tooth", "Rot-Nose", "Clawfoot", "Twitch-Eye",
+  }
+
+  local name = starts[rand(#starts)] .. middles[rand(#middles)] .. ends[rand(#ends)]
+  if rand() < 0.33 then name = name .. " " .. nicknames[rand(#nicknames)] end
+  return name

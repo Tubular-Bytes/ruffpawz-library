@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: gladiator
+name: Gladiator
+description: "Scrapper, fast and deadly: +2 initiative, +2 physical attack but weaker defenses. (-1 to both defense ratings)"
+skills: [power_strike]
+modifiers:
+  - { stat: initiative, op: add, value: 2 }
+  - { stat: physical_attack, op: add, value: 2 }
+  - { stat: physical_defense, op: add, value: -1 }
+  - { stat: magic_defense, op: add, value: -1 }

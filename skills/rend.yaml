@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: rend
+name: Rend
+description: "Hits a random enemy for 50% of physical attack as true damage and has 60% chance to cause bleed that does 100% of physical attack for 2 rounds"
+cooldown: 3
+lua: |
+  local t = enemies[rand(#enemies)]
+  local dmg = caster.stats.physical_attack
+  deal_damage(t, dmg * 0.5)
+  if rand() < 0.6 then
+    add_effect{ kind = "damage_over_time", target = t, duration = 2, amount = dmg, name = "Bleed" }
+  end

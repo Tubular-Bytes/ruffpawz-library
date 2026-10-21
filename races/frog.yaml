@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: frog
+name: Frog
+description: "placeholder"
+skills: [firestorm]
+retired: true
+modifiers: []
+name_gen: |
+  return "frog"

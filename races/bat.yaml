@@ -8,7 +8,7 @@ modifiers:
   - { stat: initiative, op: add, value: 2 }
   - { stat: physical_attack, op: add, value: 3 }
   - { stat: magic_attack, op: add, value: -2 }
-  - { stat: magic_defence, op: add, value: -2 }
+  - { stat: magic_defense, op: add, value: -2 }
 name_gen: |
   local names = { "Lestat", "Bill", "Erik", "Godric", "Pam", "Jessica" }
   return names[rand(#names)]

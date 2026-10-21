@@ -4,5 +4,6 @@ name: Plate Armor
 description: "Heavy protection: +5 physical defense but -2 initiative. Offers Guard."
 skills: [guard]
 modifiers:
-  - { stat: physical_defense, op: add, value: 5 }
   - { stat: initiative, op: add, value: -2 }
+affixes:
+  - { id: physical_defense, weight: 50, min_tier: 3 }

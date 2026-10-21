@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: bless
+name: Bless
+description: "Gives every ally (yourself included) +2 to a random attack or defense stat for 2 rounds. Each ally has a 25% chance to be cleansed of damage over time."
+cooldown: 4
+lua: |
+  local buffable = { "physical_attack", "physical_defense", "magic_attack", "magic_defense" }
+
+  for _, t in ipairs(allies) do
+    add_modifier{ target = t, stat = buffable[rand(#buffable)], op = "add", value = 2, duration = 2, name = "Bless" }
+
+    if rand() < 0.25 then
+      cleanse{ target = t, kind = "damage_over_time" }
+    end
+  end

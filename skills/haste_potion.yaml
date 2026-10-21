@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: haste_potion
+name: Haste Potion
+description: "Adds +3 initiative to yourself for 2 rounds."
+cooldown: 5
+lua: |
+  add_modifier{ target = caster, stat = "initiative", op = "add", value = 3, duration = 2, name = "Haste" }
