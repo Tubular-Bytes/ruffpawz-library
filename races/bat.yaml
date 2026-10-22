@@ -10,5 +10,20 @@ modifiers:
   - { stat: magic_attack, op: add, value: -20 }
   - { stat: magic_defense, op: add, value: -20 }
 name_gen: |
-  local names = { "Lestat", "Bill", "Erik", "Godric", "Pam", "Jessica" }
-  return names[rand(#names)]
+  local starts = { "Vesper", "Nox", "Umbra", "Dusk", "Mor", "Vel", "Cael", "Sable", "Eclips", "Thessal", "Noct", "Ves" }
+  local ends = { "wing", "ia", "us", "ith", "elle", "mire", "ra", "ix", "andra", "eth", "ar" }
+  local epithets = {
+    "Nightsip", "the Hollow", "Belfry-Born", "Moonshun", "Leatherwing", "the Unseen", "Echo-Caller",
+    "Cave-Dweller", "Dusk-Drinker", "Upside-Down", "Fruitthief", "Shadow-Flit", "the Hanging", "Dandelion-Moon", "Fall-Stalker",
+  }
+  local places = { "the Belfry", "Deepcave", "the Old Mine", "Duskfall", "the Rafters", "Hollow Oak", "Cornflower Hollow" }
+
+  local name = starts[rand(#starts)] .. ends[rand(#ends)]
+  local roll = rand()
+  if roll < 0.4 then
+    return name
+  elseif roll < 0.75 then
+    return name .. " " .. epithets[rand(#epithets)]
+  else
+    return name .. " of " .. places[rand(#places)]
+  end

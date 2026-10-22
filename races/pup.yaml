@@ -11,5 +11,29 @@ modifiers:
   - { stat: physical_defense, op: add, value: 20 }
   - { stat: magic_defense, op: add, value: 20 }
 name_gen: |
-  local names = { "Bandit", "Bluey", "Bingo", "Chilli", "Chloe" }
-  return names[rand(#names)]
+  local plain = {
+    "Bram", "Biscuit", "Rusty", "Tuck", "Mabel", "Juniper", "Gus", "Waffles", "Dot", "Moose",
+    "Pippin", "Barley", "Clover", "Sausage", "Tilly", "Fudge", "Hazel", "Buster", "Pepper", "Ziggy",
+  "Dandelion", "Cornflower", "Fallow", "Fall",
+  }
+  local jobs = { "Gate", "Hearth", "Flock", "Cart", "Bridge", "Camp", "Hill", "Barn" }
+  local roles = { "warden", "keeper", "guard", "watch", "hound" }
+  local epithets = {
+    "Goodboy", "Stickfetcher", "Gatewarden", "the Steadfast", "Muddypaws", "Bellyrub-Bane",
+    "the Loyal", "Squeaky-Toy", "Tail-Wagger", "Postman-Chaser", "Couch-Guard", "the Very Good",
+  "Dandelion-Chaser", "Cornflower-Crowned", "the Fall-Born", "Circled-by-Cornflowers",
+  }
+
+  -- a rare full name, about 1 in 100
+  if rand() < 0.01 then return "Fall Dandelions Circled by Cornflowers" end
+
+  local roll = rand()
+  if roll < 0.5 then
+    return plain[rand(#plain)]
+  elseif roll < 0.8 then
+    return plain[rand(#plain)] .. " " .. epithets[rand(#epithets)]
+  else
+    -- a title instead of an epithet: "Barn-guard Pippin"
+    local title = jobs[rand(#jobs)] .. "-" .. roles[rand(#roles)]
+    return title .. " " .. plain[rand(#plain)]
+  end

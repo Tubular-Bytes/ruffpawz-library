@@ -7,5 +7,26 @@ modifiers:
   - { stat: physical_attack, op: add, value: 10 }
   - { stat: magic_defense, op: add, value: -80 }
 name_gen: |
-  local names = { "Luna", "Milo", "Leo", "Bella", "Charlie", "Lucy", "Loki", "Shadow", "Max" }
-  return names[rand(#names)]
+  local plain = {
+    "Mittens", "Pounce", "Whiskerton", "Marmalade", "Tuxedo", "Pickle", "Nutmeg", "Biscotti",
+    "Sootling", "Tigerlily", "Mochi", "Figaro", "Ember", "Oreo", "Truffle", "Smudge", "Cleocatra",
+  }
+  local grand = { "Sir", "Lady", "Duchess", "Baron", "Countess", "Admiral", "Professor", "Lord" }
+  local fancy = { "Purrcival", "Fluffington", "Whiskerbottom", "Pawsworth", "Mewlius", "Clawdia", "Hissington", "Napsworth" }
+  local titles = {
+    "Knocker-of-Cups", "Sunbeam-Hoarder", "Curtain-Climber", "the Unimpressed", "Lap-Denier",
+    "Midnight-Zoomer", "Keyboard-Walker", "the Aloof", "Third-Breakfast", "Box-Inspector",
+  "Dandelion-Batter", "Cornflower-Napper", "Fallen-Leaf-Pouncer",
+  }
+
+  local roll = rand()
+  if roll < 0.35 then
+    return plain[rand(#plain)]
+  elseif roll < 0.65 then
+    return plain[rand(#plain)] .. " " .. titles[rand(#titles)]
+  else
+    -- "Sir Purrcival", sometimes with a title as well
+    local name = grand[rand(#grand)] .. " " .. fancy[rand(#fancy)]
+    if rand() < 0.4 then name = name .. " " .. titles[rand(#titles)] end
+    return name
+  end
