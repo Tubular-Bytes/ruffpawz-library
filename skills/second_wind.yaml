@@ -3,6 +3,5 @@ id: second_wind
 name: Second Wind
 description: "Restores a quarter of your maximum health to yourself."
 cooldown: 4
-retired: true
 lua: |
   heal(caster, caster.max_hp * 0.25)
