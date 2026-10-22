@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: kitten
 name: Kitten
-description: "Some say they selfish but at least they know sweep. They're handy with physical weapons but weak to magic damage."
+description: "Some say they're selfish but at least they know sweep. They're handy with physical weapons but weak to magic damage."
 skills: [sweep]
 modifiers:
-  - { stat: physical_attack, op: add, value: 30 }
-  - { stat: magic_defense, op: add, value: -40 }
+  - { stat: physical_attack, op: add, value: 20 }
+  - { stat: magic_defense, op: add, value: -60 }
 name_gen: |
   local names = { "Luna", "Milo", "Leo", "Bella", "Charlie", "Lucy", "Loki", "Shadow", "Max" }
   return names[rand(#names)]

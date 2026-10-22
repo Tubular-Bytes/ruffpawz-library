@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: chaos_staff
 name: Chaos Staff
-description: "Offers Chaos Bolt and Sweep."
-skills: [chaos_bolt, sweep]
+description: "Offers Chaos Bolt."
+skills: [chaos_bolt]
 affixes:
   - { id: magic_attack, weight: 60 }

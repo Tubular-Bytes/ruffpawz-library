@@ -1,8 +1,9 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: rogue
 name: Rogue
-description: "Stealthy but squishy: -200 health, +30 initiative. Starts with Backstab."
+description: "Stealthy but squishy: 20% less health, +30% physical attack, +30 initiative. Starts with Backstab."
 skills: [backstab]
 modifiers:
-  - { stat: hp, op: add, value: -200 }
+  - { stat: hp, op: mul, value: 0.8 }
   - { stat: initiative, op: add, value: 30 }
+  - { stat: physical_attack, op: mul, value: 1.3 }

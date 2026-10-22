@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: fire_staff
 name: Fire Staff
-description: "Offers Flame Bolt and Sweep."
-skills: [flame_bolt, sweep]
+description: "Offers Flame Bolt."
+skills: [flame_bolt]
 affixes:
   - { id: magic_attack, weight: 60 }

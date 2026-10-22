@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: skillshot
+name: Skillshot
+description: "Hits one random enemy for twice your physical attack. Their physical defense counts against it (at least 1)."
+cooldown: 5
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, math.floor(mitigate(caster.stats.physical_attack * 2, t, "physical", 1) + 0.5))

@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: staff
 name: Staff
-description: "Offers Chain Lightning and Sweep."
+description: "A heavy focus: -10 physical attack. Offers Chain Lightning and Sweep."
 skills: [chain_lightning, sweep]
+modifiers:
+  - { stat: physical_attack, op: "add", value: -10 }
 affixes:
   - { id: magic_attack, weight: 60 }

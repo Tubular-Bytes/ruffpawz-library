@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: sword
 name: Sword
-description: "Reliable steel: rolls a physical attack bonus. Offers Sweep and Backstab."
-skills: [sweep, backstab]
+description: "Reliable steel: rolls a physical attack bonus. Offers Sweep and Power Strike."
+skills: [sweep, power_strike]
 affixes:
   - { id: physical_attack, weight: 50, max_tier: 3 }

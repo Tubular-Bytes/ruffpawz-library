@@ -2,7 +2,7 @@
 id: backstab
 name: Backstab
 description: "Hits one random enemy for twice your physical attack. Twice their physical defense counts against it (at least 1)."
-cooldown: 2
+cooldown: 3
 lua: |
   local t = enemies[rand(#enemies)]
   deal_damage(t, math.floor(mitigate(caster.stats.physical_attack * 2, t, "physical", 2) + 0.5))

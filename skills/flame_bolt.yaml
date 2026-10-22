@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: flame_bolt
 name: Flame Bolt
-description: "Hits one random enemy with fire for 70% of your magic attack, half their magic defense counting against it (at least 1), and sets them burning for 25% of your magic attack each round for 3 rounds. The burning ignores defense."
+description: "Hits one random enemy with fire for 70% of your magic attack, half their magic defense counting against it (at least 1), and sets them burning for 30% of your magic attack each round for 3 rounds. The burning ignores defense."
 cooldown: 2
 tags: [fire]   # all damage this skill deals carries the fire tag
 lua: |
   local t = enemies[rand(#enemies)]
   deal_damage(t, math.floor(mitigate(caster.stats.magic_attack * 0.7, t, "magic", 0.5) + 0.5))
-  add_effect{ kind = "damage_over_time", target = t, duration = 3, amount = math.floor(caster.stats.magic_attack * 0.25 + 0.5), name = "Burning" }
+  add_effect{ kind = "damage_over_time", target = t, duration = 3, amount = math.floor(caster.stats.magic_attack * 0.3 + 0.5), name = "Burning" }

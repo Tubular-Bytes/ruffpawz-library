@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: earth_staff
 name: Earth Staff
-description: "Offers Entangle and Sweep"
-skills: [entangle, sweep]
+description: "Offers Entangle."
+skills: [entangle]
 affixes:
   - { id: magic_attack, weight: 60 }

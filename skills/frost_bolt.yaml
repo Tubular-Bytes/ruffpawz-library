@@ -21,4 +21,4 @@ lua: |
     add_effect{ kind = "stun", target = t, duration = 2, dispel = { "ice" }, name = "Frozen" }
   end
 
-  deal_damage(t, damage)
+  deal_damage(t, math.floor(damage + 0.5))

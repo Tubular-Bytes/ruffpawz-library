@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: lightning_staff
 name: Lightning Staff
-description: "Offers Lightning Bolt and Sweep."
-skills: [lightning_bolt, sweep]
+description: "Offers Lightning Bolt."
+skills: [lightning_bolt]
 affixes:
   - { id: magic_attack, weight: 60 }
