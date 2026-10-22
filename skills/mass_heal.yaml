@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: mass_heal
 name: Mass Heal
-description: "Restores 15 health to all allies"
+description: "Restores 150 health to all allies"
 cooldown: 3
 lua: |
   for _, a in ipairs(allies) do
-    heal(a, 15)
+    heal(a, 150)
   end

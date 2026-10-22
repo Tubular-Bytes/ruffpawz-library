@@ -1,14 +1,14 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: rat
 name: Rat
-description: "placeholder"
+description: "Quick, vicious and fragile. +30 physical attack and +30 initiative, but 20% less health, -20 physical defense and -30 magic defense. They start with rend."
 skills: [rend]
 modifiers:
   - { stat: hp, op: mul, value: 0.8 }
-  - { stat: initiative, op: add, value: 3 }
-  - { stat: physical_attack, op: add, value: 3 }
-  - { stat: physical_defense, op: add, value: -2 }
-  - { stat: magic_defense, op: add, value: -3 }
+  - { stat: initiative, op: add, value: 30 }
+  - { stat: physical_attack, op: add, value: 30 }
+  - { stat: physical_defense, op: add, value: -20 }
+  - { stat: magic_defense, op: add, value: -30 }
 name_gen: |
   local starts = { "Skr", "Sn", "Qu", "Kr", "Chi", "Gn", "Vr", "Sk", "Tw", "Gr", "Sq" }
   local middles = { "i", "ee", "ik", "itt", "ack" }

@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: priest
 name: Priest
-description: "The classic healer: +10 health, +2 physical and magic defense, -4 physical and magic attack. Starts with Mass Heal and Bless."
+description: "The classic healer: +100 health, +20 physical and magic defense, -40 physical and magic attack. Starts with Mass Heal."
 skills: [mass_heal]
 modifiers:
-  - { stat: physical_defense, op: add, value: 2 }
-  - { stat: magic_defense, op: add, value: 2 }
-  - { stat: physical_attack, op: add, value: -4 }
-  - { stat: magic_attack, op: add, value: -4 }
+  - { stat: physical_defense, op: add, value: 20 }
+  - { stat: magic_defense, op: add, value: 20 }
+  - { stat: physical_attack, op: add, value: -40 }
+  - { stat: magic_attack, op: add, value: -40 }

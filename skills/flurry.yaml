@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: flurry
 name: Flurry
-description: "Two quick hits, each on a random enemy (it can be the same one twice). Each deals 80% of your physical attack, the target's physical defense counting against it (at least 1)."
+description: "Two quick hits, each on a random enemy (it can be the same one twice). Each deals 100% of your physical attack, the target's physical defense counting against it (at least 1)."
 cooldown: 3
 lua: |
   for _ = 1, 2 do
     local t = enemies[rand(#enemies)]
-    deal_damage(t, math.floor(mitigate(caster.stats.physical_attack * 0.8, t, "physical", 1) + 0.5))
+    deal_damage(t, math.floor(mitigate(caster.stats.physical_attack * 1.0, t, "physical", 1) + 0.5))
   end

@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: firestorm
 name: Firestorm
-description: "Hits every enemy for 50% of your magic attack with fire. For 3 rounds, everyone carrying a frost item (weapon, armor, ...) deals 2 less damage, allies included."
+description: "Hits every enemy for 50% of your magic attack with fire, 60% of their magic defense counting against it (at least 1 each). For 3 rounds, everyone carrying a frost item (weapon, armor, ...) deals 20 less damage, allies included."
 cooldown: 5
 tags: [fire]
 lua: |
@@ -11,7 +11,7 @@ lua: |
 
   for _, t in ipairs(everyone) do
     if t.team ~= caster.team then
-      deal_damage(t, caster.stats.magic_attack * 0.5)
+      deal_damage(t, math.floor(mitigate(caster.stats.magic_attack * 0.5, t, "magic", 0.6) + 0.5))
     end
 
     for _, e in ipairs(t.effects) do
@@ -22,8 +22,8 @@ lua: |
     end
   end
 
-  -- Anything with a frost-tagged item (weapon, armor, ...) deals 2 less damage for 3 rounds.
+  -- Anything with a frost-tagged item (weapon, armor, ...) deals 20 less damage for 3 rounds.
   add_modifier{
-    damage = "dealt", op = "add", value = -2,
+    damage = "dealt", op = "add", value = -20,
     applies_to = { tags = { "frost" } }, duration = 3, name = "Firestorm",
   }

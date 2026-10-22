@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: haste
 name: Haste Potion
-description: "Gives the Haste Potion skill: increase initiative by 3 for two rounds."
+description: "Gives the Haste Potion skill: increase initiative by 30 for two rounds."
 skills: [haste_potion]

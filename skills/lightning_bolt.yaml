@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
+id: lightning_bolt
+name: Lightning Bolt
+description: "Hits one random enemy with lightning for 70% of your magic attack, half their magic defense counting against it (at least 1), and leaves them shocked for 25% of your magic attack each round for 3 rounds. The shock ignores defense."
+cooldown: 2
+tags: [lightning]   # all damage this skill deals carries the lightning tag
+lua: |
+  local t = enemies[rand(#enemies)]
+  deal_damage(t, math.floor(mitigate(caster.stats.magic_attack * 0.7, t, "magic", 0.5) + 0.5))
+  add_effect{ kind = "damage_over_time", target = t, duration = 3, amount = math.floor(caster.stats.magic_attack * 0.25 + 0.5), name = "Shocked" }

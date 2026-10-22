@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/skill
 id: guard
 name: Guard
-description: "Raises your own physical and magic defense by 6 for 2 rounds."
+description: "Raises your own physical and magic defense by 60 for 2 rounds."
 cooldown: 3
 lua: |
-  local buff_value_self = 6
-  local buff_value_other = 3
+  local buff_value_self = 60
+  local buff_value_other = 30
 
   local function buff(who, value)
     for _, stat in ipairs{ "physical_defense", "magic_defense" } do

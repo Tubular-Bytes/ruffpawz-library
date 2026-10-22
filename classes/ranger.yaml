@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: ranger
 name: Ranger
-description: "Stealthy but squishy: -20 health, +3 initiative. Starts with Backstab."
+description: "Stealthy but squishy: -200 health, +30 initiative. Starts with Backstab."
 skills: [backstab]
 modifiers:
-  - { stat: hp, op: add, value: -20 }
-  - { stat: initiative, op: add, value: 3 }
+  - { stat: hp, op: add, value: -200 }
+  - { stat: initiative, op: add, value: 30 }

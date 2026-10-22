@@ -1,7 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: dagger
 name: Dagger
-description: "Light and quick. Offers Backstab and Flurry."
+description: "Light and quick: rolls an initiative or physical attack bonus. Offers Backstab and Flurry."
 skills: [backstab, flurry]
 affixes:
+  - { id: physical_attack, weight: 50, max_tier: 2 }
   - { id: initiative, weight: 50, max_tier: 2 }

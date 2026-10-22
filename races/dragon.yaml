@@ -1,14 +1,14 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: dragon
 name: Dragon
-description: "They're scary, conjure fire and hard to get through. They start with the 50% extra health and high defense ratings (+3 physical, +6 magic) but they're not very good at dealing physical damage (-3) and they're very slow (-4 initiative)"
+description: "They're scary, conjure fire and hard to get through. They start with 70% extra health and high defense ratings (+30 physical, +60 magic) but they're not very good at dealing physical damage (-30) and they're very slow (-40 initiative)"
 skills: [firestorm]
 modifiers:
   - { stat: hp, op: mul, value: 1.7 }
-  - { stat: initiative, op: add, value: -4 }
-  - { stat: physical_defense, op: add, value: 3 }
-  - { stat: magic_defense, op: add, value: 6 }
-  - { stat: physical_attack, op: add, value: -3 }
+  - { stat: initiative, op: add, value: -40 }
+  - { stat: physical_defense, op: add, value: 30 }
+  - { stat: magic_defense, op: add, value: 60 }
+  - { stat: physical_attack, op: add, value: -30 }
 name_gen: |
   if rand() < 0.5 then
     local a = { "Vyr", "Ign", "Thar", "Zal", "Kor", "Sael", "Drak", "Ael" }
