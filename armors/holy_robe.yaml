@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: holy_robe
+name: Holy Robe
+description: "Blessed cloth: rolls a magic defense bonus, and sometimes a health bonus. Offers Bless and Guard."
+skills: [bless, guard]
+affixes:
+  - { id: magic_defense, weight: 50 }
+  - { id: health_point, weight: 20, max_tier: 2 }

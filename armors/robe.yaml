@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: robe
 name: Robe
-description: "Light cloth. Offers Mend and Guard."
-skills: [mend, guard]
+description: "Light cloth. Offers Second Wind and Guard."
+skills: [second_wind, guard]
 affixes:
-  - { id: magic_defense, weight: 50 }
+  - { id: magic_defense, weight: 50, max_tier: 3 }
   - { id: initiative, weight: 10, max_tier: 2 }

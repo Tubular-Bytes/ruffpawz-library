@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
+id: blessing
+name: Blessing Potion
+description: "Gives the Bless skill: every ally, yourself included, gets +20 to a random attack or defense stat for 2 rounds, and each has a 25% chance to be cleansed of damage over time."
+skills: [bless]

@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: dragon
 name: Dragon
-description: "They're scary, conjure fire and hard to get through. They start with 70% extra health and high defense ratings (+30 physical, +60 magic) but they're not very good at dealing physical damage (-30) and they're very slow (-40 initiative)"
+description: "They're scary, conjure fire and hard to get through. They start with 60% extra health and high defense ratings (+30 physical, +50 magic) but they're not very good at dealing physical damage (-30) and they're very slow (-40 initiative)"
 skills: [firestorm]
 modifiers:
-  - { stat: hp, op: mul, value: 1.7 }
+  - { stat: hp, op: mul, value: 1.6 }
   - { stat: initiative, op: add, value: -40 }
   - { stat: physical_defense, op: add, value: 30 }
-  - { stat: magic_defense, op: add, value: 60 }
+  - { stat: magic_defense, op: add, value: 50 }
   - { stat: physical_attack, op: add, value: -30 }
 name_gen: |
   if rand() < 0.5 then

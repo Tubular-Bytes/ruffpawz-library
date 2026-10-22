@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: pup
 name: Pup
-description: "Arf. They are strong and fierce protectors but they're slow. They start with 40% extra health and +20 on both defense types but they have -20 penalty on their initiative and their attack ratings are also decreased by 10."
+description: "Arf. They are strong and fierce protectors but they're slow. They start with 40% extra health and +20 on both defense types but they have -20 penalty on their initiative and their attack ratings are also decreased by 10. They start with rage, which raises their physical and magic attack by 40% for 2 rounds."
 skills: [rage]
 modifiers:
   - { stat: hp, op: mul, value: 1.4 }

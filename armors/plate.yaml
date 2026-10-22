@@ -1,9 +1,10 @@
 # yaml-language-server: $schema=https://ruffpawz.tubularbytes.dev/api/schema/block
 id: plate
 name: Plate Armor
-description: "Heavy protection: rolls a high physical defense bonus (tier 3 or better) but has -20 initiative. Offers Guard."
+description: "Heavy protection: rolls a high physical defense and some magic defense bonus but has -20 initiative. Offers Guard."
 skills: [guard]
 modifiers:
   - { stat: initiative, op: add, value: -20 }
 affixes:
   - { id: physical_defense, weight: 50, min_tier: 3 }
+  - { id: magic_defense, weight: 50, max_tier: 3 }
